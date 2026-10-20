@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Don Raúl · Especias & Aditivos</title>
+<meta name="description" content="Condimentos y especias Don Raúl en envases de 25 g. Una historia familiar en cada mezcla.">
+<link rel="icon" href="logo.jpg">
+<style>
+:root{--cr:#f6ecd9;--br:#3b1f14;--or:#b5541c;--gr:#4a6b2f;--card:#fffaf0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,serif;background:var(--cr);color:var(--br);line-height:1.5}
+a{color:var(--or)}
+header{text-align:center;padding:24px 16px 8px}
+header img{width:min(260px,70%);border-radius:50%}
+nav{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;padding:12px;position:sticky;top:0;background:var(--cr);border-bottom:1px solid #d9c6a3;z-index:5}
+nav a{text-decoration:none;font-weight:bold;color:var(--br)}
+section{max-width:1100px;margin:auto;padding:32px 16px}
+h1,h2{text-align:center}
+h2{color:var(--or);font-size:1.9rem}
+.hero p{text-align:center;max-width:640px;margin:8px auto;font-size:1.15rem}
+.btn{display:inline-block;background:var(--or);color:#fff;padding:12px 24px;border:0;border-radius:30px;font-size:1rem;text-decoration:none;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid #e2d3b3;border-radius:14px;overflow:hidden;box-shadow:0 2px 6px #0001}
+.ph{height:170px;display:flex;align-items:center;justify-content:center;font-size:4rem}
+.ph img{width:100%;height:100%;object-fit:cover}
+.body{padding:14px}
+.body h3{margin:0 0 4px}
+.tag{font-size:.8rem;color:var(--gr);font-weight:bold}
+details{margin-top:8px}
+summary{cursor:pointer;color:var(--or);font-weight:bold}
+details p{margin:6px 0 0;font-size:.95rem}
+form{max-width:560px;margin:auto;display:grid;gap:12px}
+input,textarea{padding:12px;border:1px solid #cdb98f;border-radius:8px;font:inherit;background:#fff}
+.center{text-align:center}
+footer{background:var(--br);color:var(--cr);text-align:center;padding:20px;font-size:.9rem}
+footer a{color:#f0b27a}
+</style>
+</head>
+<body>
+<header><img src="logo.jpg" alt="Logo Don Raúl Especias & Aditivos"></header>
+<nav><a href="#productos">Productos</a><a href="#contacto">Contacto</a><a href="https://wa.me/5493496559200" target="_blank" rel="noopener">WhatsApp</a></nav>
+
+<section class="hero">
+<h1>Una historia familiar en cada mezcla</h1>
+<p>Especias y condimentos en cómodos envases de 25 g, ideales para tu cocina, tu parrilla y tu negocio.</p>
+<p class="center"><a class="btn" href="#productos">Ver productos</a></p>
+</section>
+
+<section id="productos">
+<h2>Nuestros productos · 25 g</h2>
+<div class="grid" id="grid"></div>
+</section>
+
+<section id="contacto">
+<h2>Contacto</h2>
+<p class="center">Consultá por precios, pedidos por mayor o envíos.<br>
+📱 Celular: <a href="tel:+5493496559200">03496-15559200</a> · ✉️ <a href="mailto:donraulcondimentos@gmail.com">donraulcondimentos@gmail.com</a></p>
+<form action="https://formsubmit.co/donraulcondimentos@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Nueva consulta desde la web Don Raúl">
+<input type="hidden" name="_captcha" value="true">
+<input type="text" name="_honey" style="display:none">
+<input name="nombre" placeholder="Tu nombre" required>
+<input name="email" type="email" placeholder="Tu email" required>
+<input name="telefono" placeholder="Tu teléfono (opcional)">
+<textarea name="mensaje" rows="5" placeholder="¿Qué querés consultar?" required></textarea>
+<button class="btn" type="submit">Enviar consulta</button>
+</form>
+</section>
+
+<footer>© <span id="y"></span> Don Raúl · Especias & Aditivos · <a href="tel:+5493496559200">03496-15559200</a> · <a href="mailto:donraulcondimentos@gmail.com">donraulcondimentos@gmail.com</a></footer>
+
+<script>
+// slug, nombre, emoji, color, receta
+const P=[
+["aji-molido","Ají molido","🌶️","#f1c3a4","Salsa criolla picante","Picá tomate, cebolla y morrón, sumá 1 cdita de ají molido, aceite, vinagre y sal. Reposá 30 minutos."],
+["ajo-granulado","Ajo granulado","🧄","#f3e7c9","Pan de ajo","Mezclá manteca blanda con ajo granulado y perejil, untá un pan y gratinalo 10 min a horno fuerte."],
+["ajo-polvo","Ajo en polvo","🧄","#efe3cc","Papas rústicas","Cortá papas en gajos, condimentá con ajo en polvo, sal y aceite; horno 40 min a 200 °C."],
+["comino","Comino molido","🌾","#d9b98a","Empanadas de carne","Sumá 1 cdita de comino al relleno de carne con cebolla, pimentón y ají. Cociná y dejá enfriar antes de armar."],
+["coriandro","Coriandro molido","🌿","#e3d6a8","Milanesas aromáticas","Agregá coriandro, sal y ajo al huevo batido para las milanesas; pasá por pan rallado y freí u horneá."],
+["nuez-moscada","Nuez moscada molida","🥜","#c9a27a","Puré cremoso","Hacé el puré con manteca y leche, y terminá con una pizca de nuez moscada."],
+["oregano","Orégano","🍃","#b9c98f","Pizza casera","Cubrí la masa con salsa, muzzarella y espolvoreá orégano antes de hornear."],
+["perejil","Perejil hoja","🌱","#a9c98a","Merluza al horno","Cubrí filetes con perejil, limón, aceite de oliva y sal. Horno 15 min."],
+["pimienta-blanca","Pimienta blanca molida","⚪","#ece6da","Salsa blanca","Hacé una bechamel (manteca, harina, leche) y aromatizala con pimienta blanca y nuez moscada."],
+["pimienta-negra-granos","Pimienta negra en granos","⚫","#8d7f73","Bife a la pimienta","Molé los granos, cubrí el bife, sellalo en sartén y finalizá con crema de leche."],
+["adobo-pizza","Adobo para pizza","🍕","#f0c9a0","Pizzetas express","Untá pan árabe con tomate, queso y adobo para pizza; gratiná 8 minutos."],
+["cebolla-polvo","Cebolla en polvo","🧅","#eddcb8","Hamburguesas caseras","Mezclá la carne picada con cebolla en polvo, sal y pimienta; armá y cociná a la plancha."],
+["chimichurri","Chimichurri","🥩","#c8d6a0","Chimichurri para el asado","Hidratá 2 cdas en agua tibia, sumá aceite, vinagre y ajo. Reposá 1 hora y servilo con la carne."],
+["condimento-carne","Condimento para carne","🍖","#d9a98a","Costillar al horno","Frotá el costillar con el condimento y aceite, y horneá lento 2 h a 160 °C."],
+["pure-papa","Puré de papa en escamas","🥔","#f2e3b5","Ñoquis rápidos","Preparalo con agua caliente, sumá harina y huevo, formá ñoquis y hervilos hasta que floten."],
+["paprika","Paprika","🌶️","#e8a77c","Pollo a la paprika","Condimentá trozos de pollo con paprika, ajo y limón, y dorá en sartén o al horno."],
+["pimenton-ahumado","Pimentón ahumado","🔥","#c98a6a","Papas bravas","Freí papas en cubos y sumales salsa de tomate con pimentón ahumado y una pizca de ají."],
+["pimienta-negra","Pimienta negra molida","⚫","#9c8f84","Revuelto gramajo","Salteá cebolla y jamón, sumá papas fritas, huevos batidos y pimienta negra recién agregada."],
+["provenzal","Provenzal premium","🌿","#c5d39c","Papas provenzal","Salteá papas con aceite, sal y provenzal; sumá ajo picado al final."],
+["saborizante-chorizo","Saborizante para chorizo","🌭","#d8a083","Chorizo casero","Mezclá carne de cerdo con grasa y el saborizante, dejá reposar 24 h, embutí y cociná a la parrilla."],
+["saborizante-morcilla","Saborizante para morcilla","🍲","#b98a7a","Morcilla casera","Combiná cebolla cocida, grasa, sangre y el saborizante; embutí y hervila 30 minutos."],
+["surtidas","Especias surtidas","✨","#e6d29b","Pollo a las finas hierbas","Frotá un pollo con la mezcla de especias, aceite y limón; asalo 1 hora a 180 °C."]
+];
+const g=document.getElementById("grid");
+P.forEach(([s,n,e,c,rt,r])=>{
+ const d=document.createElement("div");d.className="card";
+ d.innerHTML=`<div class="ph" style="background:${c}"><img src="img/${s}.jpg" alt="${n} al natural" loading="lazy" onerror="this.remove();this.parentNode.textContent='${e}'"></div>
+ <div class="body"><span class="tag">Envase de 25 g</span><h3>${n}</h3>
+ <details><summary>Receta: ${rt}</summary><p>${r}</p></details></div>`;
+ g.appendChild(d);
+});
+document.getElementById("y").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
